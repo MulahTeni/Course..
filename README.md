@@ -1,1 +1,1 @@
-# Data, AI, Course 
+# Contents of taken Python courses
