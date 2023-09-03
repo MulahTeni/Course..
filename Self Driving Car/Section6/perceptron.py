@@ -1,14 +1,18 @@
 import numpy as np
 import matplotlib.pyplot as plt
+
 def draw(x1,x2):
     ln=plt.plot(x1,x2)
+    
 def sigmoid(score):
     return 1/(1+np.exp(-score))
+    
 def calculate_error(line_parameters, points , y):
     n=points.shape[0]
     p= sigmoid(points*line_parameters)
     cross_entropy=-(1/n)*(np.log(p).T*y + np.log(1-p).T*(1-y))
     return cross_entropy
+    
 def gradient_descent(line_parameters, points, y , alpha):
     n=points.shape[0]
     for i in range(2000):
